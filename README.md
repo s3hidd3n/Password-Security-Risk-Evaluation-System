@@ -189,5 +189,6 @@ password-risk-system/
 │   ├── 10k-most-common.txt
 │   ├── 100k-most-used-passwords-NCSC.txt
 │   ├── xato-net-10-million-passwords.txt
+│   ├── rockyou.txt
 │
 └── README.md
