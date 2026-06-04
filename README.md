@@ -177,18 +177,17 @@ This hierarchical approach ensures:
 
 ## 📁 Project Structure
 
+The project is organised as follows:
+
 ```bash
 password-risk-system/
 │
-├── src/
-│   ├── main.py
-│   ├── guessability.py
+├── main.py
+├── guessability.py
 │
-├── images/
-│   ├── breach-check.png
-│   ├── pattern-analysis.png
-│   ├── entropy-calculation.png
-│   ├── pseudocode.png
-│   └── system-architecture.png
+├── data/
+│   ├── 10k-most-common.txt
+│   ├── 100k-most-used-passwords-NCSC.txt
+│   ├── xato-net-10-million-passwords.txt
 │
 └── README.md
