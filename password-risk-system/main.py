@@ -1,4 +1,4 @@
-#This is my MSC Project, Password checker Application
+
 
 import getpass
 import hashlib
