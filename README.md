@@ -94,6 +94,45 @@ It separates control flow from analytical processing to ensure clarity, scalabil
 
 ---
 
+## 📌 Scope of the System
+
+This system is a stand-alone password vulnerability assessment tool developed in Python. It evaluates user-provided passwords through a hierarchical decision-making process designed to simulate real-world password attack methodologies.
+
+The system operates in two modes depending on available resources and connectivity.
+
+---
+
+### 📴 Offline Mode
+
+In offline mode, all analysis is performed locally without external API calls. The evaluation process includes:
+
+- Local breach detection using precompiled password datasets  
+- Structural pattern analysis to identify weak or predictable formats  
+- Entropy estimation to measure password randomness and complexity  
+
+The local datasets used in this project include:
+
+- RockYou Dataset 
+- NCSC 100,000 Most Common Passwords List 
+- 10 Million Xato Password Dataset 
+
+---
+
+### 🌐 Online Mode (Optional)
+
+When internet access is available, the system can perform an additional layer of breach detection using the **Have I Been Pwned API**.
+
+This mode uses the **k-anonymity principle**, where only partial hash prefixes of the password are transmitted for lookup. This ensures that:
+
+- Plain text passwords are never exposed  
+- Sensitive credential data is not directly shared  
+- Privacy is maintained during external validation  
+
+Reference:
+- Hunt (2018) — Have I Been Pwned API v3
+
+---
+
 📌 Architecture Diagram:
 
 ![System Architecture](images/system-architecture.png)
